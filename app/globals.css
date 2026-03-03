@@ -1,26 +1,58 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --text-soft: #080808;
+
+  --button-soft: #e50101;
+  --button-light: #fe4f00;
+  --button-disabled: #6a6e79;
+  --button-contrast: #6e6e73;
+  --button-gradient: linear-gradient(90deg, #e50101 0%, #fe4f00 100%);
+
+  --url-hover: #2997ff;
+
+  --bento-blue: #0066cc;
+  --bento-gradient: linear-gradient(90deg, #080808 0%, #6a6e79 100%);
+
+  --program-red: #d3655d;
+  --program-green: #306668;
+  --program-blue-soft: #1044a4;
+  --program-blue-light: #0a60d8;
+  --program-blue-dark: #15266d;
+  --program-blue-gradient: linear-gradient(296.68deg, #15266d -18.49%, #0a60d8 93.58%);
+}
+
+.dark {
+  --background: #080808;
+  --text-soft: #f5f5f7;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-text-soft: var(--text-soft);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-button-soft: var(--button-soft);
+  --color-button-light: var(--button-light);
+  --color-button-disabled: var(--button-disabled);
+  --color-button-contrast: var(--button-contrast);
+
+  --color-url-hover: var(--url-hover);
+
+  --color-bento-blue: var(--bento-blue);
+
+  --color-program-red: var(--program-red);
+  --color-program-green: var(--program-green);
+  --color-program-blue-soft: var(--program-blue-soft);
+  --color-program-blue-light: var(--program-blue-light);
+  --color-program-blue-dark: var(--program-blue-dark);
+
+  --font-montreal: var(--font-montreal);
+  --font-sfpro: var(--font-sfpro);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-soft);
+  font-family: var(--font-sfpro);
 }
