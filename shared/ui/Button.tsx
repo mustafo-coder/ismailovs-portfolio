@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({ children, className, variant = 'primary
   return (
     <button
       className={cn(
-        'flex h-[44.93px] items-center justify-center gap-0.5 rounded-full px-4 py-2',
+        'flex h-[44.93px] cursor-pointer text-sm leading-[100%] font-normal tracking-[-0.28px] items-center justify-center gap-0.5 rounded-full px-4 py-2',
         variants[variant],
         className,
       )}
