@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 const Montreal = localFont({
   variable: '--font-montreal',
@@ -72,8 +74,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${SFPro.variable} ${Montreal.variable} antialiased`}>{children}</body>
+    <html lang="en" className="dark">
+      <body className={`${SFPro.variable} ${Montreal.variable} antialiased`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
